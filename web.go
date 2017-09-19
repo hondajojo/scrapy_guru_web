@@ -90,7 +90,7 @@ func ajaxdetailCookie(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(token)
 	if token != cookie.Value {
 		w.WriteHeader(http.StatusForbidden)
-		w.Write([]byte("no cookie"))
+		w.Write([]byte("cookie & token not match"))
 		return
 	}
 
